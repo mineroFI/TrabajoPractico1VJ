@@ -31,7 +31,8 @@ class Particula {
     vida--;
   }
 
-  void displayy() {
+  void display() // Corrección aplicada del commit 3
+  {
     float alpha = map(vida, 0, 120, 0, 255);
     alpha = constrain(alpha, 0, 255);
     noStroke();
