@@ -31,7 +31,7 @@ class Particula {
     vida--;
   }
 
-  void display() {
+  void displayy() {
     float alpha = map(vida, 0, 120, 0, 255);
     alpha = constrain(alpha, 0, 255);
     noStroke();
