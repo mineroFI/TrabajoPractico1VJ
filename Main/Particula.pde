@@ -4,6 +4,7 @@ class Particula {
   float velX;
   float velY;
   int vida;
+  color col;
 
   Particula(float x, float y) {
     this.x = x;
@@ -13,6 +14,7 @@ class Particula {
     this.velY = random(-1.0, -0.2);
     // Vida en frames
     this.vida = int(random(60, 120));
+    this.col = color(random(200, 255), random(100, 200), random(0, 50));
   }
 
   void update() {
@@ -33,7 +35,7 @@ class Particula {
     float alpha = map(vida, 0, 120, 0, 255);
     alpha = constrain(alpha, 0, 255);
     noStroke();
-    fill(124, 176, 242, alpha);
+    fill(col, alpha);
     ellipse(x, y, 6, 6);
   }
 
